@@ -1,3 +1,53 @@
-<HTML>
+<!DOCTYPE html>
+<HTML lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Contact</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
 
+        textarea{
+            height: 200px;
+        }
+        input, textarea{
+            margin-bottom: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-circle"></div>
+        <nav>
+            <a href="#">ABOUT US</a>
+            <a href="#">FEATURES</a>
+            <a href="#">OUR PRODUCT</a>
+            <a href="#">CONTACT</a>
+            <a href="#">CAREER</a>
+        </nav>
+        <div class="logo-circle"></div>
+    </header>
+
+    <section>
+        <div class="Contact-form">
+            <h2>Email Us</h2>
+            <form>
+                <label for="Full-name">Full Name:</label>
+                <input type="text" name="Full-name" id="Full-name" autofocus required/>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required/>
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" id="phone" required/>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" required></textarea>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </section>
+</body>
 </HTML>
