@@ -248,15 +248,14 @@ body {
 .hero-feature {
     background: url('images/hero-feature1.jpg') no-repeat top center/cover;
     padding: 0rem;
-    min-height: 500px;
+    max-height: 500px;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 
     clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 80%);
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero-feature-background {
@@ -266,11 +265,15 @@ body {
     height: 100%;
 
     margin: 0;
-    padding: 6rem;
-
+    padding: 3rem 3rem 5rem 3rem;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+
+
+    position: relative;
+    z-index: 1;
 }
 
 .hero-feature-container {
@@ -282,8 +285,10 @@ body {
     text-align: center;
 
     color: #ffffff;
-
+    position: relative;
+    z-index: 1;
 }
+
 
 .hero-feature-button{
     max-width: 300px;
@@ -336,20 +341,21 @@ body {
 }
 
 /* Decoration Section */
+
 .decoration-color-block{
     background-color: #14B8A6;
     padding: 4rem 2rem;
 
-    clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 70% 100%, 0% 65%);
-    translate: 0% -100%;
-
-    position: relative;
-    z-index: 1;
+    clip-path: polygon(0% 0%, 70% 100%, 100% 0%, 100% 55%, 70% 110%,0% 65%);
+    translate: 0% -50%;
 }
 
 .decoration-image-block{
     position: relative;
     z-index: 3;
+    grid-column: 2 / span 1;
 
-    translate: 70% -115%;
+    translate: 70% -100%;
+    position: relative;
+    z-index: 2;
 }
