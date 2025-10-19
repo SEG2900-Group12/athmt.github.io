@@ -151,15 +151,34 @@ body {
 }
 
 .nav-links ul{
-    display: flex;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+
+    gap: 1rem;
+    margin: 0;
     list-style: none;
-    gap: 2rem;
+
+    
+}
+
+.nav-links ul li{
+    margin: 0;
+    padding: 2rem 0.5rem;
+    vertical-align: center;
 }
 
 .nav-links ul li a{
     text-decoration: none;
     color: #ffffff;
     font-size: 1rem;
+}
+
+.nav-links ul li:hover{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #24304d;
+    border-bottom: #14B8A6 3px solid;
 }
 
 .assistance {
@@ -190,6 +209,7 @@ body {
 
 .assistance-text span{
     color: #14B8A6;
+    font-weight: bold;
 }
 
 .sign-in {
@@ -234,11 +254,13 @@ body {
     align-items: center;
     justify-content: center;
 
-    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 75%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 80%);
+    position: relative;
+    z-index: 2;
 }
 
 .hero-feature-background {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
 
     width: 100%;
     height: 100%;
@@ -313,3 +335,21 @@ body {
     margin-right: 0.8rem;
 }
 
+/* Decoration Section */
+.decoration-color-block{
+    background-color: #14B8A6;
+    padding: 4rem 2rem;
+
+    clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 70% 100%, 0% 65%);
+    translate: 0% -100%;
+
+    position: relative;
+    z-index: 1;
+}
+
+.decoration-image-block{
+    position: relative;
+    z-index: 3;
+
+    translate: 70% -115%;
+}
