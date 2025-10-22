@@ -1,126 +1,224 @@
 <!DOCTYPE html>
-<!--Made by Atharv Patel-->
+<!-- Made by Atharv Patel -->
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wingman</title>
-  
+  <link rel="icon" type="image/png" href="images/WingmanLogo.png">
+
   <style>
+    /*Reseter*/
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0e1113;
-      color: white;
+      background-color: rgb(18, 22, 33);
+      margin: 0;
+      height: 100vh;
+      overflow-x: hidden;
+      position: relative;
     }
-    /* Top navigation bar */
+
+    .container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /*The initial logo class*/
+    .Logo {
+      width: 300px;
+      height: auto;
+      cursor: pointer;
+      animation: pulse 1s infinite;
+      z-index: 10;
+    }
+
+    .hidden {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    @keyframes pulse {
+      0% {opacity: 1;}
+      70% {opacity: 1;}
+      85% {opacity: 0.4;}
+      100% {opacity: 1;}
+    }
+
+    h1 {
+      color: rgb(92, 189, 175);
+      font-size: 50px;
+      text-align: center;
+      text-shadow: 0 0 2.5px rgb(92, 189, 175);
+    }
+
+    h2 {
+      color: rgb(255, 180, 90);
+      font-size: 25px;
+      text-align: center;
+      text-shadow: 0 0 2.5px rgb(255, 180, 90);
+    }
+
+    /*Header*/
     header {
-      background-color: #66b9ff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #121621;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      z-index: 100;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    header.show-header {
+      display: flex;
+      opacity: 1;
+    }
+
+    /* Logo Section */
+    .logo {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 12px 40px;
+      gap: 10px;
     }
 
-    .logo-circle {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      background-color: white;
+    /*logo in header*/
+    .logo img {
+      width: 40px;
+      height: auto;
     }
 
+    /*wingmann text in header*/
+    .logo h1 {
+      color: rgb(92, 189, 175);
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    /* Navigation */
     nav {
       display: flex;
-      gap: 18px;
+      gap: 35px;
     }
 
     nav a {
-      background-color: #2f63a6;
-      color: white;
       text-decoration: none;
-      padding: 8px 18px;
-      border-radius: 3px;
-      font-size: 14px;
-      letter-spacing: 0.5px;
+      color: #fff;
+      font-size: 16px;
+      transition: color 0.3s ease;
     }
 
-
-    .drone {
-      background-color: #324f7f;
-      padding: 80px 60px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+    nav a:hover {
+      color: rgb(92, 189, 175);
     }
 
-    .drone-text {
-      flex: 1;
-      min-width: 300px;
+    /*Sign-in button*/
+    .sign-in {
+      background-color: rgb(92, 189, 175);
+      color: #fff;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    .drone-text h1 {
-      font-size: 60px;
-      letter-spacing: 25px;
-      font-weight: 400;
+    .sign-in:hover {
+      background-color: #6bd8c5;
     }
 
-    .drone-text p {
-      margin-top: 10px;
-      font-style: italic;
-      color: #cfd9e6;
-    }
-
-    .drone-image {
-      flex: 1;
-      min-width: 250px;
-      background-color: white;
-      color: black;
-      text-align: center;
-      font-weight: bold;
-      padding: 80px 0;
-      transform: skew(-5deg);
-    }
-
-    .about-btn {
-      display: inline-block;
-      background-color: #2f63a6;
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 3px;
-      margin-top: 40px;
+    /*Helps fitting on any screen type*/
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+      }
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
   </style>
 </head>
-<body>
-  <header>
-    <div class="logo-circle"></div>
+
+<body id="Body">
+
+  <!--intro to website -->
+  <div class="container">
+    <img src="images/WingmanLogo.png" alt="WingmanLogo" class="Logo" id="Logo">
+    <h1 id="Title" class="hidden">W I N G M A N</h1>
+    <h2 id="Slogan" class="hidden">Always By Your Side</h2>
+  </div>
+
+  <!-- header -->
+  <header id="mainHeader">
+    <div class="logo">
+      <img src="images/WingmanLogo.png" alt="Wingman Logo">
+      <h1>Wingman</h1>
+    </div>
+
     <nav>
-      <a href="#">FEATURES</a>
-      <a href="#">OUR PRODUCT</a>
-      <a href="#">CONTACT</a>
-      <a href="#">CAREER</a>
+      <a href="ProductFeatures.html">Features</a>
+      <a href="Pricing.html">Pricing</a>
+      <a href="Team.html">About Us</a>
+      <a href="Contact.html">Contact</a>
+      <a href="Career.html">Career</a>
     </nav>
-    <div class="logo-circle"></div>
+
+    <button class="sign-in">SIGN-IN</button>
   </header>
 
-  <section class="drone">
-    <div class="drone-text">
-      <h1>WINGMAN</h1>
-      <p>YOUR WINGMAN SIDEKICK</p>
-      <a href="#" class="about-btn">ABOUT US</a>
-    </div>
+  <!--Java code for animations and transition fro logo button-->
+  <script>
+    const Logo = document.getElementById("Logo");
+    const Title = document.getElementById("Title");
+    const Slogan = document.getElementById("Slogan");
+    const body = document.getElementById("Body");
+    const header = document.getElementById("mainHeader");
 
-    <div class="drone-image">
-      IMAGE
-      
-    </div>
-  </section>
+    Logo.addEventListener('click', () => {
+      //Hide intro logo
+      Logo.style.display = "none";
+
+      //Show title and slogan
+      Title.className = "show";
+      Slogan.className = "show";
+
+      //change background
+      body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/hero-feature.PNG')";
+      body.style.backgroundSize = "cover";
+      body.style.backgroundPosition = "center";
+
+      //Reveal header at top
+      header.classList.add("show-header");
+    });
+  </script>
+
 </body>
 </html>
 
