@@ -63,11 +63,43 @@
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
+    .typing {
+      font-family: monospace;
+      font-size: 2rem;
+      color: rgb(92, 189, 175);
+      white-space: nowrap;          /* prevent line breaks */
+      overflow: hidden;             /* hide extra text */
+      border-right: 3px solid #fff; /* cursor effect */
+      width: 0;                     /* start from 0 width */
+      animation: typing 3s steps(20, end) forwards, blink 0.7s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 18ch; } /* length of text in characters */
+    }
+
+   #welcome {
+      font-family: monospace;
+      font-size: 2rem;
+      color: rgb(92, 189, 175);
+      position: absolute;  /* needed for left/top */
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+
     @keyframes pulse {
       0% {opacity: 1;}
       70% {opacity: 1;}
       85% {opacity: 0.4;}
       100% {opacity: 1;}
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #fff; }
     }
 
     h1 {
@@ -215,17 +247,21 @@
       .logo-container h1 { font-size: 5vw; }
       .logo-container img { width: 15vw; max-width: 40px; }
     }
+
   </style>
 </head>
 
 <body id="Body">
 
-  <!--Pulsing Logo Intro-->
+
+  
+  <h3 id="welcome"></h3>
+
   <img src="images/WingmanLogo.png" alt="WingmanLogo" class="Logo" id="Logo">
 
   <!--Website Index-->
   <div class="container">
-
+    <!--Pulsing Logo Intro-->
     <h1 id="Title" class="hidden">W I N G M A N</h1>
     <h2 id="Slogan" class="hidden">Always By Your Side</h2>
 
@@ -259,13 +295,18 @@
 
   <!--Java code for animations and transition fro logo button-->
   <script>
+    
+    //Variables
     const Logo = document.getElementById("Logo");
     const Title = document.getElementById("Title");
     const Slogan = document.getElementById("Slogan");
     const body = document.getElementById("Body");
     const header = document.getElementById("mainHeader");
     const Description = document.getElementById("Description")
+    const text = "Welcome to Wingman";
+    const element = document.getElementById("welcome");
 
+    //transition
     Logo.addEventListener('click', () => {
       //Hide intro logo
       Logo.style.display = "none";
@@ -274,6 +315,8 @@
       Title.className = "show";
       Slogan.className = "show";
       Description.className = "show"
+      element.className = "hidden"
+
 
       //change background
       body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/hero-feature.PNG')";
@@ -283,6 +326,17 @@
       //Reveal header at top
       header.classList.add("show-header");
     });
+
+    //welcome typing
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        element.innerHTML += text[i];
+        i++;
+        setTimeout(type, 60); // typing speed in ms
+      }
+    }
+    type();
   </script>
 
 </body>
