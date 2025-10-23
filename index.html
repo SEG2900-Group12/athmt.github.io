@@ -42,14 +42,29 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      width: 30vw; /* CHANGED: responsive width */
+
+      /* include translate AND an initial scale so hover doesn't remove translate */
+      transform: translate(-50%, -50%) scale(1);
+      transform-origin: center center;
+
+      width: 30vw;
       max-width: 300px;
       min-width: 120px;
       height: auto;
       cursor: pointer;
       animation: pulse 1s infinite;
       z-index: 10;
+
+      display: inline-block;
+      transition: transform 0.25s ease; /* smooth */
+      will-change: transform;
+      backface-visibility: hidden; /* helps sub-pixel rendering */
+    }
+
+    .Logo:hover,.Logo:focus-visible {
+      animation: none;
+      /* keep translate and update scale only */
+      transform: translate(-50%, -50%) scale(1.1);
     }
 
     .hidden {
@@ -82,7 +97,7 @@
    #welcome {
       font-family: monospace;
       font-size: 2rem;
-      color: rgb(92, 189, 175);
+      color: rgb(114, 221, 205);
       position: absolute;  /* needed for left/top */
       left: 50%;
       top: 30%;
@@ -214,6 +229,7 @@
 
     nav a:hover {
       color: rgb(92, 189, 175);
+      transform: scale(1.1);
     }
 
     /*Sign-in button*/
@@ -230,6 +246,7 @@
     .sign-in:hover {
       background-color: rgb(18, 22, 33);
       color: rgb(92, 189, 175);
+      transform: scale(1.1);
     }
 
     /*Helps fitting on any screen type*/
