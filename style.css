@@ -402,13 +402,16 @@ body {
     padding: 1rem;
 
     transition: all 0.3s ease;
+
+    border-radius: 1rem;
+    box-shadow: 2rem 1rem 10rem rgba(224, 221, 221, 0.219);
 }
 
 .feature-card:hover{
     transform: translateY(-10px);
 
     border-radius: 1rem;
-    box-shadow: 2rem 1rem 10rem rgba(224, 221, 221, 0.6);
+    box-shadow: 2rem 1rem 10rem rgba(170, 168, 168, 0.793);
 }
 
 .feature-section-title{
@@ -443,7 +446,7 @@ body {
 }
 
 .feature-icon-purple{
-    background-image: linear-gradient(135deg, #ef2ed2, #d8affa);
+    background-image: linear-gradient(135deg, #f706d2, #ec94e3);
     color: #ffffff;
 }
 
@@ -453,12 +456,103 @@ body {
 }
 
 .feature-icon-orange{
-    background-image: linear-gradient(135deg, #ede90d, #fbcf9e);
+    background-image: linear-gradient(135deg, #f7661d, #f3a057);
     color: #ffffff;
 }
 
 .feature-icon-yellow{
-    background-image: linear-gradient(135deg, #fbbf24, #f7e59e);
+    background-image: linear-gradient(135deg, #028dd3, #50e7f2);
     color: #ffffff;
 }
 
+.feature-card.blue h2{
+    color: #427bed;
+}
+
+.feature-card.green h2{
+    color: #1ed768;
+}
+
+.feature-card.purple h2{
+    color: #f706d2;
+}
+
+.feature-card.red h2{
+    color: #f32e2e;
+}
+
+.feature-card.orange h2{
+    color: #f7661d;
+}
+
+.feature-card.yellow h2{
+    color: #028dd3;
+}
+
+.feature-card.blue:hover{
+    background-color: #b5ebf032;
+}
+
+.feature-card.green:hover{
+    background-color: #1ed7680f;
+}
+
+.feature-card.purple:hover{
+    background-color: #f706d312;
+}
+
+.feature-card.red:hover{
+    background-color: #f32e2e15;
+}
+
+.feature-card.orange:hover{
+    background-color: #f7661d18;
+}
+
+.feature-card.yellow:hover{
+    background-color: #028dd312;
+}
+
+/* Fairy Section */
+.fairy-section{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 4rem;
+    padding: 2rem 4rem;
+    gap: 3rem;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.fairy-text{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 6rem;
+}
+
+.fairy-text h1{
+    font-size: 3rem;
+}
+
+.fairy-options{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    border-left: #14B8A6 4px solid;
+    box-shadow: 2rem 1rem 10rem rgba(224, 221, 221, 0.6);
+}
+
+.fairy-list{
+    list-style: none;
+    padding: 0;
+}
+
+.fairy-list li::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f054";
+    color: #14B8A6;
+    margin-right: 10px;
+}
