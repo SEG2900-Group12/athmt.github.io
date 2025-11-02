@@ -3,43 +3,109 @@
 <head>
     <title>Our Prices</title>
     <link rel="icon" type="image/png" href="images/WingmanLogo.png"> <!--This line added by Atharv(Don't change)-->
-</head>
-<body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Price.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <header>
-        <table width="100%" cellpadding="10">
-            <tr>
-                <td width="10%" align="center">
-                    <div>[LOGO]</div>
-                </td>
-                <td width="20%">
-                    <h2>WINGMAN</h2>
-                </td>
-                <td width="70%" align="right">
-                    <a href="#">FEATURES</a>&nbsp;&nbsp;&nbsp;
-                    <a href="#">OUR PRODUCT</a>&nbsp;&nbsp;&nbsp;
-                    <a href="#">CONTACT</a>&nbsp;&nbsp;&nbsp;
-                    <a href="#">CAREER</a>
-                </td>
-            </tr>
-        </table>
-    </header>
+    <style>
+        /* Buttons shrink and fade when pressed */
+        .image-button:active {
+            transform: scale(0.9);   /* shrink to 90% */
+            opacity: 0.7;            /* slightly fade */
+            transition: transform 0.1s, opacity 0.1s; /* smooth effect */
+        }
+        .image-button {
+            transition: transform 0.1s, opacity 0.1s; /* smooth revert when released */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-intro">
+            <div class="opening-location">
+                <div class="opening-text">
+                    <div class="opening-icon"><i class="fas fa-business-time"></i></div>
+                    <p><strong>Opening Hours:</strong> Mon-Fri, 9am - 11pm</p>
+                </div>
+
+                <div class="location-text">
+                    <div class="location-icon"><i class="fas fa-location-dot"></i></div>
+                    <p><strong>Location Near You: <span>Ottawa</span></strong></p>
+                    <div class="location-chevron-icon"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <div class="color-block">
+                <!-- Decorative Color Block -->
+            </div>
+
+            <div class="reach-us">
+                <div class="reach-us-text">
+                    <p><span>Reach Us:</span>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-container">
+            <div class="color-block-1">
+                <!-- Decorative Color Block -->
+            </div>
+
+            <div class="navbar-container-principal">
+                <div class="nav-logo">
+                    <a href="index.html"><img src="images/WingmanLogo.png" alt="Logo" height="60px"></a>
+                    <a href="index.html"><h2>Wingman</h2></a>
+                </div>
+
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="ProductFeatures.html">Features</a></li>
+                        <li><a href="Pricing.html">Pricing</a></li>
+                        <li><a href="Team.html">About Us</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <li><a href="Career.html">Career</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="color-block-2">
+                <!-- Decorative Color Block -->
+            </div>
+
+            <div class="sign-in">
+                <div class="sign-in-text">Sign-in</div>
+            </div>
+        </div>
+    </nav>
 
     <hr>
 
     <main>
         <table width="100%" cellpadding="20">
             <tr valign="top">
-
                 <td width="50%" align="center">
                     <table border="1" cellpadding="20" width="80%">
                         <tr>
                             <td align="center">
-                                <p>IMAGE</p>
-                                <p>
-                                    <a href="#">&lt;</a> &nbsp;&nbsp;&nbsp;
-                                    <a href="#">&gt;</a>
-                                </p>
+                                <div class="image-container">
+                                    <img id="slider-image" src="images/classic-drone.png" alt="Product image" width="300">
+                                    <div class="slider-controls" style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
+                                        <button id="prev" class="image-button"
+                                            style="width:60px; height:40px; background-color:white; border:none; border-radius:12px; padding:0; cursor:pointer; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+                                            <img src="images/Left.jpg" alt="Previous" style="width:70%; height:auto;">
+                                        </button>
+                                        <button id="next" class="image-button"
+                                            style="width:60px; height:40px; background-color:white; border:none; border-radius:12px; padding:0; cursor:pointer; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+                                            <img src="images/Right.jpg" alt="Next" style="width:70%; height:auto;">
+                                        </button>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -50,7 +116,8 @@
                         </tr>
                     </table>
                 </td>
-    <!-- This is a single-line comment -->
+
+                <!-- This is a single-line comment -->
 
                 <td width="50%" align="center">
                     <table border="1" cellpadding="10" width="80%">
@@ -82,9 +149,16 @@
 
     <hr>
 
-    <footer align="center">
-        <a href="#">ABOUT US</a>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Wingman. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
     </footer>
-
+<script src="script.js"></script>
 </body>
-</html> 
+</html>
