@@ -1,0 +1,20 @@
+body {
+    background-image: url('images/hero-feature2.png'); /* your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content-container {
+    background-color: rgba(220, 220, 220, 0.9); /* semi-transparent grey */
+    border-radius: 20px;
+    margin: 60px auto;        /* more space above and below header/footer */
+    padding: 40px 30px;       /* more space inside the box */
+    max-width: 1200px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+
+    min-height: 60vh;         /* optional: makes box at least 60% of viewport height */
+}

@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Our Prices</title>
-    <link rel="icon" type="image/png" href="images/WingmanLogo.png"> <!--This line added by Atharv(Don't change)-->
+    <link rel="icon" type="image/png" href="images/WingmanLogo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Price.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -10,17 +10,26 @@
     <style>
         /* Buttons shrink and fade when pressed */
         .image-button:active {
-            transform: scale(0.9);   /* shrink to 90% */
-            opacity: 0.7;            /* slightly fade */
-            transition: transform 0.1s, opacity 0.1s; /* smooth effect */
+            transform: scale(0.9);
+            opacity: 0.7;
+            transition: transform 0.1s, opacity 0.1s;
         }
         .image-button {
-            transition: transform 0.1s, opacity 0.1s; /* smooth revert when released */
+            transition: transform 0.1s, opacity 0.1s;
+        }
+
+        /* Remove table borders */
+        table {
+            border-collapse: collapse;
+        }
+        table, td, th {
+            border: none;
         }
     </style>
 </head>
 
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="navbar-intro">
             <div class="opening-location">
@@ -28,7 +37,6 @@
                     <div class="opening-icon"><i class="fas fa-business-time"></i></div>
                     <p><strong>Opening Hours:</strong> Mon-Fri, 9am - 11pm</p>
                 </div>
-
                 <div class="location-text">
                     <div class="location-icon"><i class="fas fa-location-dot"></i></div>
                     <p><strong>Location Near You: <span>Ottawa</span></strong></p>
@@ -36,9 +44,7 @@
                 </div>
             </div>
 
-            <div class="color-block">
-                <!-- Decorative Color Block -->
-            </div>
+            <div class="color-block"></div>
 
             <div class="reach-us">
                 <div class="reach-us-text">
@@ -53,9 +59,7 @@
         </div>
 
         <div class="navbar-container">
-            <div class="color-block-1">
-                <!-- Decorative Color Block -->
-            </div>
+            <div class="color-block-1"></div>
 
             <div class="navbar-container-principal">
                 <div class="nav-logo">
@@ -74,9 +78,7 @@
                 </div>
             </div>
 
-            <div class="color-block-2">
-                <!-- Decorative Color Block -->
-            </div>
+            <div class="color-block-2"></div>
 
             <div class="sign-in">
                 <div class="sign-in-text">Sign-in</div>
@@ -86,65 +88,63 @@
 
     <hr>
 
+    <!-- MAIN CONTENT -->
     <main>
-        <table width="100%" cellpadding="20">
-            <tr valign="top">
-                <td width="50%" align="center">
-                    <table border="1" cellpadding="20" width="80%">
-                        <tr>
-                            <td align="center">
-                                <div class="image-container">
-                                    <img id="slider-image" src="images/classic-drone.png" alt="Product image" width="300">
-                                    <div class="slider-controls" style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
-                                        <button id="prev" class="image-button"
-                                            style="width:60px; height:40px; background-color:white; border:none; border-radius:12px; padding:0; cursor:pointer; overflow:hidden; display:flex; align-items:center; justify-content:center;">
-                                            <img src="images/Left.jpg" alt="Previous" style="width:70%; height:auto;">
-                                        </button>
-                                        <button id="next" class="image-button"
-                                            style="width:60px; height:40px; background-color:white; border:none; border-radius:12px; padding:0; cursor:pointer; overflow:hidden; display:flex; align-items:center; justify-content:center;">
-                                            <img src="images/Right.jpg" alt="Next" style="width:70%; height:auto;">
-                                        </button>
+        <div class="content-container">
+            <table width="100%" cellpadding="20">
+                <tr valign="top">
+                    <td width="50%" align="center">
+                        <table cellpadding="20" width="80%">
+                            <tr>
+                                <td align="center">
+                                    <div class="image-container">
+                                        <img id="slider-image" src="images/classic-drone.png" alt="Product image" width="300">
+
+                                        <div class="slider-controls" style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
+                                            <button id="prev" class="image-button"
+                                                style="width:60px; height:40px; background-color:white; border:none; border-radius:12px; padding:0; cursor:pointer; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+                                                <img src="images/Left.jpg" alt="Previous" style="width:70%; height:auto;">
+                                            </button>
+                                            <button id="next" class="image-button"
+                                                style="width:60px; height:40px; background-color:white; border:none; border-radius:12px; padding:0; cursor:pointer; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+                                                <img src="images/Right.jpg" alt="Next" style="width:70%; height:auto;">
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">
-                                <button>BUY NOW</button>
-                                <p>● ● ● ●</p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
 
-                <!-- This is a single-line comment -->
-
-                <td width="50%" align="center">
-                    <table border="1" cellpadding="10" width="80%">
-                        <tr>
-                            <th>TEXT</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>Description:</p>
-                                <ul>
-                                    <li>Feature 1</li>
-                                    <li>Feature 2</li>
-                                    <li>Feature 3</li>
-                                    <li>Feature 4</li>
-                                    <li>Feature 5</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">
-                                <h2>999$</h2>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+                    <td width="50%" align="center">
+                        <table cellpadding="10" width="80%">
+                            <tr>
+                                <th id="slider-big-text" style="font-size:32px;">TEXT</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Short description paragraph -->
+                                    <div id="slider-paragraph" style="margin-bottom:10px; font-size:16px;">
+                                        Description will appear here.
+                                    </div>
+                                    <!-- Features list -->
+                                    <div id="slider-description">
+                                        <!-- Bullet points inserted dynamically -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <button id="slider-price-button" style="font-size:26px; background-color: aliceblue; border:none; padding:10px 20px; border-radius:25px; cursor:pointer;">
+                                        $999
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </main>
 
     <hr>
@@ -159,6 +159,7 @@
             </div>
         </div>
     </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
