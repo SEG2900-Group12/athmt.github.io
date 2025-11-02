@@ -5,7 +5,7 @@ const images = [
     "images/minimal-design.png"
 ];
 
-// Names for big TEXT
+// drone names
 const texts = [
     "Classic Drone",
     "Fairy Form Drone",
@@ -19,14 +19,14 @@ const descriptions = [
     "Minimal Design Drone is sleek, portable, and quiet, ideal for urban environments."
 ];
 
-// Features as arrays
+// Features list
 const features = [
     ["Enhanced flight", "Outdoor ready", "Advanced sensors", "Long battery life", "Light and durable"],
     ["Advanced emotional AI", "Suited for all ages", "Humanoid assistant", "Adapts to your lifestyle", "Lightweight"],
     ["Sleek Design", "Portable", "Affordable", "Quiet", "Suited for every environment"]
 ];
 
-// Prices per drone (single displayed price)
+// Prices per drone 
 const prices = [
     "$1699",
     "$2999",
@@ -35,7 +35,7 @@ const prices = [
 
 let currentIndex = 0;
 
-// DOM elements
+
 const sliderImage = document.getElementById("slider-image");
 const sliderText = document.getElementById("slider-big-text");
 const sliderDescription = document.getElementById("slider-description");
@@ -77,6 +77,4 @@ nextButton.addEventListener("click", function(event){
     currentIndex = (currentIndex + 1) % images.length;
     updateSlider();
 });
-
-// Initialize first slide on page load
 window.onload = updateSlider;

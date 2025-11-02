@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/hero-feature2.png'); /* your background image */
+    background-image: url('images/hero-feature2.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,12 +9,12 @@ body {
 }
 
 .content-container {
-    background-color: rgba(220, 220, 220, 0.9); /* semi-transparent grey */
+    background-color: rgba(220, 220, 220, 0.9); 
     border-radius: 20px;
-    margin: 60px auto;        /* more space above and below header/footer */
-    padding: 40px 30px;       /* more space inside the box */
+    margin: 60px auto;      
+    padding: 40px 30px;       
     max-width: 1200px;
     box-shadow: 0 0 30px rgba(0,0,0,0.2);
 
-    min-height: 60vh;         /* optional: makes box at least 60% of viewport height */
+    min-height: 60vh;         
 }
