@@ -30,6 +30,15 @@
   .team-bio { margin: .25rem 0 0; }
   .team-social a { margin-right: .75rem; font-weight: 600; }
 
+  .hero-banner { position: relative; height: 400px; overflow: hidden; }
+  .hero-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-title {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0; color: #fff; text-align: center;
+  }
+
 
   @media (min-width: 640px) {
     .team-card { grid-column: span 6; }
@@ -122,12 +131,12 @@
             </div>
         </nav>
 
-  <main id="team">
-    <section class="hero hero--sub">
-      <div class="container">
-        <h1>Meet the Team</h1>
-        <p>We’re a multidisciplinary group of engineers, designers, and builders focused on simple, reliable software for student projects and startups.</p>
-      </div>
+  <main id="team"> 
+    <section class="hero hero--sub"> 
+      <div class="hero-banner"> 
+        <img class="hero-img" src="images/wide-hitech-digital-technology-concept-260nw-1819042316.jpg" alt="Background"> 
+        <h1 class="hero-title">Meet the Team</h1>
+      </div> 
     </section>
 
     <section class="container">
@@ -229,11 +238,18 @@
 
     <section class="container">
       <div class="values">
-        <h2>How we work</h2>
+        <h2>Our Story</h2>
         <ul class="values-list">
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
+          <p>...</p>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="values">
+        <h2>Our Mission</h2>
+        <ul class="values-list">
+          <p>...</p>
         </ul>
       </div>
     </section>
