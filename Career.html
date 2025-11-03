@@ -282,6 +282,27 @@
             flex-wrap:wrap;
             margin-top: 30px;
         }
+        .content-wrapper li {
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 45px;
+            list-style-position: inside;
+        }
+        .mission-table {
+            color:#111827;
+            width:90%;
+            height:auto;
+            background-color: white;
+            border-radius:15px;
+            padding:30px;
+            margin:40px auto;
+            vertical-align:top;
+            border:none;
+            display:table;
+            box-shadow: 10px 12px 12px #1f1221;
+            transition: all 0.3s ease;
+        }
+        
         .why-work-table, 
         .roles-table  {
             color:#111827;
@@ -298,7 +319,8 @@
         }
 
         .why-work-table:hover, 
-        .roles-table:hover  {
+        .roles-table:hover,
+        .mission-table:hover  {
             transition: 0.4s;
             transform: scale(1.05);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -313,10 +335,11 @@
         }   
         
         .why-work-table h2, 
-        .roles-table h2 {
+        .roles-table h2
+        .mission-table h2 {
             color:#111827;
             margin-bottom:15px;
-            font-size: 30px;
+            font-size: 25px;
             
         }   
 
@@ -331,60 +354,36 @@
     
 
         /* --- FOOTER --- */
-        table.footer {
-          background-color: #121621;
-          border-collapse: collapse;
-          padding: 20px;
-          border:none;
-        }
+        
+.footer-content{
+    background-color: #111827;
+    color: #ffffff;
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-        table.footer 
-        a {
-          color: rgb(255, 255, 255);
-          text-decoration: none;
-          margin: 0 10px;
-          transition: color 0.3s;
-        }
+    gap: 20rem;
+}
 
-        table.footer a:hover {
-          color: rgb(92, 189, 175);
-        }
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
 
-        table.footer 
-        p {
-          color: whitesmoke;
-          font-size: clamp(12px, 1.5vw, 16px);
-          margin: 5px 0;
-        }
+.footer-links a{
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    text-decoration: none;
+}
 
-        .footer-content{
-            background-color: #111827;
-            color: #ffffff;
-            padding: 4rem 6rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 20rem;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .footer-links a{
-            display: flex;
-            flex-direction: row;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover{
-            text-decoration: underline;
-        }
+.footer-links a:hover{
+    text-decoration: underline;
+}
 
 
 
@@ -476,7 +475,7 @@
     <table class="career-table" width="100%" border="0">
         <tr>
             <td height="25px" align="center">
-                <h1 style="background: linear-gradient(to left,rgb(0, 255, 170),rgb(195, 0, 255));-webkit-background-clip: text;color:transparent;">
+                <h1 style="background: linear-gradient(to left,rgb(0, 255, 170),rgb(195, 0, 255));background-clip: text;-webkit-background-clip: text;color:transparent;">
                     WE ARE HIRING!</h1>
             </td>
         </tr>
@@ -485,20 +484,44 @@
     <br>
     
     <!-- CONTENT SECTIONS -->
+
+
     <div class="content-wrapper">
+    <table class="mission-table" border="0">
+        <tr>
+            <td align="center" valign="top" style="width:100%;">
+                <h2>OUR MISSION</h2>
+                <p style="margin-top:40px;font-size:25px;background:linear-gradient(to left,rgb(0, 255, 170),rgb(195, 0, 255));background-clip: text;-webkit-background-clip: text;color:transparent;">
+                    At Wingman, our goal is to create smart drone companions that understand you. 
+                    We believe technology should help people live easier, safer, and more connected lives. 
+                    Our drones don't just follow you, they support you, give you real-time info, and make every moment more useful. 
+                    We want to bring the power of AI and robotics to everyone in a simple, friendly way.
+                </p>
+                <br>
+                <br>
+                <br>
+                <li style="text-align: center;list-style-position: inside;">Build drones that think and adapt to real people.</li>
+                <li style="text-align: center;list-style-position: inside;">Keep design simple, beautiful, and human-focused.</li>
+                <li style="text-align: center;list-style-position: inside;">Explore how tech can make daily life smarter, not harder.</li>
+                <li style="text-align: center;list-style-position: inside;">Grow a team that values creativity, honesty, and fun.</li>
+            </td>
+        </tr>
+    </table>        
         <table class="why-work-table" border="0">
             <tr>
                 <td align="center" valign="top">
                     <h2>WHY WORK WITH US</h2>
-                    <p style="margin-top: 40px;font-size: 25px;background: linear-gradient(to left,rgb(0, 255, 170),rgb(195, 0, 255));-webkit-background-clip: text;color:transparent;">
-                        Join the Wingman team and help build smart drones that follow you and give you information. At Wingman, you will work on cool technology that helps people every day. Be part of a team that creates products that are fun, useful and always by your side.</p>
+                    <p style="margin-top: 40px;font-size: 25px;background: linear-gradient(to left,rgb(0, 255, 170),rgb(195, 0, 255));background-clip: text;-webkit-background-clip: text;color:transparent;">
+                        Wingman team and work on drone technology that makes life easier and more fun. 
+                        Collaborate with a team of innovative engineers, designers, and marketers who love solving real-world problems. 
+                        At Wingman, your work will directly impact products that help people daily.</p>
                     <br>
                     <br>
                     <br>
                     
-                    <li>Work with advanced drone technology and AI</li>
-                    <li>Be part of a creative, innovative team.</li>
-                    <li>Influence a product that helps people in their daily lives.</li>      
+                    <li style="font-size: 18px;">Work with advanced drone technology and AI</li>
+                    <li style="font-size: 18px;">Be part of a creative, innovative team.</li>
+                    <li style="font-size: 18px;">Influence a product that helps people in their daily lives.</li>      
                 </td>
             </tr>
         </table>
@@ -506,36 +529,43 @@
         <table class="roles-table" border="0">
             <tr>
                 <td  align="center" valign="top">
-                    <h2>ROLES</h2>
+                    <h2>WHAT ARE WE ARE LOOKING FOR</h2>
 
-                    <p style="margin-top: 40px;font-size: 25px;background: linear-gradient(to left,rgb(0, 255, 170),rgb(195, 0, 255));-webkit-background-clip: text;color:transparent;">
-                        We're looking for passionate individuels to join our team, some roles include:</p>
+                    <p style="margin-top: 40px;font-size: 25px;background: linear-gradient(to left,rgb(0, 255, 170),rgb(195, 0, 255));background-clip: text;-webkit-background-clip: text;color:transparent;">
+                        We're looking for passionate individuels to to help Wingman reach new heights, some roles available include:</p>
                     <br>
                     <br>
                     <br>
                     <br>
                     <br>
-                    <li>Software Engineer: Make Wingman smart and help it answer questions.</li>
-                    <li>Designer: Make Wingman easy and fun to use</li>
-                    <li>Marketing and Support: Help people know about Wingman and use it well</li>    
+                    <li style="font-size: 18px;">Software Engineer: Develop smart drone features and AI capabilities.</li>
+                    <li style="font-size: 18px;">Designer: Make Wingman easy and fun to use.</li>
+                    <li style="font-size: 18px;"style="font-size: 18px;">Marketing & Support: Connect with users, promote our technology, and provide excellent support.</li>
+                    <li style="font-size: 18px;">Data Analyst: Optimize performance and improve user experience using data insights.</li>
+                    <li style="font-size: 18px;">Hardware Engineer: Enhance drone mechanics and ensure reliable operation.</li>    
                 </td>
             </tr>
         </table>
     </div> 
     <br>
 
-    <!-- FOOTER -->
-    <table class="footer" width="100%" border="0">
-        <tr>
-            <td align="center">
-                <p>
-                    <a href="Contact.html">JOIN OUR TEAM</a> | 
-                    <a href="Team.html">ABOUT US</a>
-                </p>
-                <p>&#169; 2025 Wingman</p>
-            </td>
-        </tr>
-    </table>
+     <!-- JavaScript loads last -->
+        <script src="main.js"></script>
 
-</body>
+    </body>
+
+    <footer>
+        <div class="footer-content">
+            
+            <p>&copy; 2024 Wingman. All rights reserved.</p>
+
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+
+            </div>
+        </div> 
+    </footer>
+
 </html>
