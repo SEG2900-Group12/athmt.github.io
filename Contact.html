@@ -4,51 +4,114 @@
     <meta charset="UTF-8"/>
     <title>Contact Us</title>
     <link rel="icon" type="image/png" href="images/WingmanLogo.png"> <!--This line added by Atharv(Don't change)-->
-    <style>
-        form{
-            display: flex;
-            flex-direction: column;
-            width: 300px;
-        }
-
-        textarea{
-            height: 200px;
-        }
-        input, textarea{
-            margin-bottom: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="Contact.css"/>
 
 </head>
 
 <body>
-    <header>
-        <div class="logo-circle"></div>
-        <nav>
-            <a href="Team.html">ABOUT US</a>
-            <a href="ProductFeatures.html">FEATURES</a>
-            <a href="Pricing.html">OUR PRODUCT</a>
-            <a href="Contact.html">CONTACT</a>
-            <a href="Career.html">CAREER</a>
-        </nav>
-        <div class="logo-circle"></div>
-    </header>
+    <!-- header -->
+  <nav class="navbar">
+            <div class="navbar-intro">
+                <div class="opening-location">
+                    <div class ="opening-text">
+                        <div class="opening-icon"><i class="fas fa-business-time"></i></div>
+                        <p><strong>Opening Hours:</strong> Mon-Fri, 9am - 11pm</p>
+                    </div>
 
-    <section>
-        <div class="Contact-form">
-            <h2>Email Us</h2>
-            <form>
-                <label for="Full-name">Full Name:</label>
-                <input type="text" name="Full-name" id="Full-name" autofocus required/>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required/>
-                <label for="phone">Phone:</label>
-                <input type="tel" name="phone" id="phone" required/>
-                <label for="message">Message:</label>
-                <textarea name="message" id="message" required></textarea>
-                <input type="submit" value="Submit"/>
-            </form>
+                    <div class ="location-text">
+                        <div class="location-icon"><i class="fas fa-location-dot"></i></div>
+                        <p><strong>Location Near You: <span>Ottawa</span></strong></p>
+                        <div class="location-chevron-icon"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+                </div>
+
+                <div class="color-block">
+                    <!-- Decorative Color Block -->
+                </div>
+
+                <div class="reach-us">
+                    <div class="reach-us-text">
+                        <p><span>Reach Us:</span>
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-container">
+                <div class="color-block-1">
+                    <!-- Decorative Color Block -->
+                </div>
+
+                <div class="navbar-container-principal">
+
+                    <div class="nav-logo">
+                        <a href="index.html"><img src="images/WingmanLogo.png" alt="Logo" height="60px"></a>
+                        <a href="index.html"><h2>Wingman</h2></a>
+                    </div>
+
+                    <div class="nav-links">
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="Pricing.html">Pricing</a></li>
+                            <li><a href="Team.html">About Us</a></li>
+                            <li><a href="Contact.html">Contact</a></li>
+                            <li><a href="Career.html">Career</a></li>
+                        </ul>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="color-block-2">
+                    <!-- Decorative Color Block -->
+                </div>
+
+                <div class="sign-in">
+                    <div class="sign-in-text">Sign-in</div>
+                </div>
+            </div>
+        </nav>
+<form class="Contact-form">
+  <h2>Email Us</h2>
+            
+  <div class="form-columns">
+    <div class="info">
+        <label for="Full-name">Full Name:</label>
+        <input type="text" name="Full-name" id="Full-name" autofocus required/>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required/>
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone" required/>
+    </div>
+
+    <div class="message">
+      <label for="message">Message:</label>
+        <textarea name="message" id="message" required></textarea>
+    </div>
+  </div>
+
+  <div class="submit-container">
+    <input type="submit" value="Submit"/>
+  </div>
+</form>
         </div>
-    </section>
+    <footer>
+        <div class="footer-content">
+            
+            <p>&copy; 2024 Wingman. All rights reserved.</p>
+
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+
+            </div>
+        </div> 
+    </footer>
 </body>
 </HTML>
