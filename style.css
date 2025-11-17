@@ -158,8 +158,6 @@ body {
     gap: 2rem;
     margin: 0;
     list-style: none;
-
-    
 }
 
 .nav-links ul li{
@@ -251,6 +249,30 @@ body {
 
 .hero-feature {
     background: url('images/hero-feature1.jpg') no-repeat top center/cover;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 80%);
+    position: relative;
+    z-index: 2;
+}
+
+.team-feature {
+    background: url('images/team.jpg') no-repeat top center/cover;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 80%);
+    position: relative;
+    z-index: 2;
+}
+
+.pricing-feature {
+    background: url('images/pricing.jpg') no-repeat top center/cover;
     height: 500px;
 
     display: flex;
