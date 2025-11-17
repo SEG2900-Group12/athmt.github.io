@@ -13,7 +13,7 @@ const observer = new IntersectionObserver((entries, observer) => {
       let count = 0;
 
       const updateCounter = () => {
-        const speed = 70; // smaller number = faster animation
+        const speed = 90; // smaller number = faster animation
         if(count < target){
           count++;
           counter.textContent = count + "k+";

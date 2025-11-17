@@ -265,6 +265,146 @@
             text-decoration: none;
         }
 
+        /* Hero Feature */
+.hero-feature-section{
+    max-height: 500px;
+}
+
+.hero-feature {
+    background: url('images/career.jpg') no-repeat top center/cover;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 80%);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-feature-background {
+    background-color: rgba(0, 0, 0, 0.6);
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 3rem 3rem 5rem 3rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-feature-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-feature-button{
+    max-width: 300px;
+    padding: 0rem 2rem;
+    border-radius: 50px;
+
+    text-align: center;
+    font-size: 1rem;
+    align-items: center;
+    
+    background-color: #1c263d;
+}
+
+.hero-feature-button i{
+    color:#14B8A6;
+    margin-right: 0.8rem;
+}
+
+.hero-feature-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-feature-text h1{
+    font-size: 5.5rem;
+    margin: 1.5rem;
+}
+
+.hero-feature-text p{
+    max-width: 600px;
+
+    font-size: 1rem;
+}
+
+.hero-feature-button-2{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 6rem;
+}
+
+.access, .demo{
+    max-width: 300px;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+
+    text-align: center;
+    font-size: 1rem;
+    align-items: center;
+    
+    background-color: #1c263d;
+}
+
+.access i, .demo i{
+    color:#14B8A6;
+    margin-right: 0.8rem;
+}
+
+.demo a{
+    text-decoration: none;
+    
+    color: white;
+}
+
+
+/* Decoration Section */
+
+.decoration-color-block{
+    background-color: #14B8A6;
+    padding: 4rem 2rem;
+
+    clip-path: polygon(0% 0%, 70% 100%, 100% 0%, 100% 55%, 70% 100%,0% 65%);
+    translate: 0% -100%;
+
+    position: relative;
+    z-index: 1;
+}
+
+.decoration-image-block{
+    display: flex;
+    justify-content: right;
+
+    grid-column: 2 / span 1;
+
+    translate: 0% -98%;
+    position: relative;
+    z-index: 3;
+}
+
         /* --- MAIN CONTENT --- */
         .career-table {
           color: rgb(255, 255, 255);
@@ -491,31 +631,56 @@
             </div>
         </nav>
 
-        <!-- MAIN IMAGE -->
-    <table class="career-image" width="100%" height="500px" border="0">
-        <tr>
-            <td align="center">
-                <img src="images/careerpage.jpg" alt="Career Image" style="width:100%;height:auto;object-fit: fill;">
-            </td>
-        </tr>
-    </table>
+        <!-- Hero Career Section -->
+         <section class="hero-feature-section">
+            
+            <div class="hero-feature">
 
-    <br>
-    <!-- PAGE TITLE -->
-    <table class="career-table" width="100%" border="0">
-        <tr>
-            <td height="25px" align="center">
-                <h1 style="background: linear-gradient(to left,rgb(0, 255, 170),rgb(204, 178, 178));background-clip: text;-webkit-background-clip: text;color:transparent;">
-                    WE ARE HIRING!</h1>
-            </td>
-        </tr>
-    </table>
 
-    <br>
+                <div class="hero-feature-background">
+
+                    <div class="hero-feature-container">
+                        <div class="hero-feature-button">
+                            <!--<p><i class="fas fa-robot"></i>Your Revolutionary AI Assistant</p>-->
+                        </div>
+
+                        <div class="hero-feature-text">
+                            <h1>We are hiring!</h1>
+                            <!--<p>Your magical AI companion that flies by your side, 
+                                providing instant guidance, information, and assistance whenever you need it.
+                                Stay confident, productive, and one step ahead anywhere, anytime.
+                            </p>-->
+                        </div>
+
+                        <div class="hero-feature-button-2">
+                            <!--<div class="access">
+                                <p><i class="fas fa-lock"></i>Get Early Access</p>
+                            </div>-->
+                            <div class="demo">
+                                <p>
+                                    <i class="fas fa-paper-plane"></i>
+                                    <a href="Contact.html">Apply</a>
+                                </p>
+                            </div>
+                        </div>
+                            
+                    </div>
+                
+                </div>
+
+            </div>
+
+            <div class="decoration-color-block">
+                    <!-- Decorative Color Block in css-->
+            </div>
+                
+            <div class="decoration-image-block">
+                <img src="images/deco3.png" alt="Wingman Hero Image" height="500px">
+            </div>
+
+        </section>
+
     
-    <!-- CONTENT SECTIONS -->
-
-
     <div class="content-wrapper">
     <table class="mission-table" border="0">
         <tr>
